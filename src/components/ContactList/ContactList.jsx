@@ -1,7 +1,16 @@
 // import css from "./ContactList.module.css";
 
-const ContactList = () => {
-  return <div>ContactList</div>;
+import Contact from "../Contact/Contact.jsx";
+
+const ContactList = ({ contacts }) => {
+  return (
+    <ul>
+      {Array.isArray(contacts) &&
+        contacts.map((contact) => {
+          return <Contact key={contact.id} contact={contact} />;
+        })}
+    </ul>
+  );
 };
 
 export default ContactList;

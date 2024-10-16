@@ -1,0 +1,30 @@
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+  align-items: center;
+}
+.listContainer:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.listContainer p {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  margin-right: 10px;
+}
+
+.listContainer button {
+  border: 2px solid darkgray;
+  border-radius: 5px;
+  background-color: lightgray;
+  height: fit-content;
+  padding: 5px;
+}
