@@ -1,0 +1,23 @@
+.button {
+  border: 2px solid darkgray;
+  border-radius: 5px;
+  background-color: lightgray;
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+  transition: transform 0.1s, background-color 0.1s;
+}
+
+.button:hover {
+  background-color: rgb(165, 163, 163);
+  color: white;
+}
+
+.button:active {
+  transform: scale(0.95);
+  background-color: gray;
+}
+
+.submit {
+  margin: 0 auto;
+}

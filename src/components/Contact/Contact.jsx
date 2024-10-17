@@ -1,8 +1,9 @@
 import css from "./Contact.module.css";
 import { FaUser } from "react-icons/fa6";
 import { BsTelephoneFill } from "react-icons/bs";
+import Button from "../Button/Button.jsx";
 
-const Contact = ({ contact }) => {
+const Contact = ({ contact, onDeleteContact }) => {
   return (
     <li className={css.listContainer}>
       <div>
@@ -15,7 +16,7 @@ const Contact = ({ contact }) => {
           <span>{contact.number}</span>
         </p>
       </div>
-      <button type="button">Delete</button>
+      <Button onClickDelete={() => onDeleteContact(contact.id)}>Delete</Button>
     </li>
   );
 };

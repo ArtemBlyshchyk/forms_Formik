@@ -20,11 +20,3 @@
 .avatar {
   margin-right: 10px;
 }
-
-.listContainer button {
-  border: 2px solid darkgray;
-  border-radius: 5px;
-  background-color: lightgray;
-  height: fit-content;
-  padding: 5px;
-}

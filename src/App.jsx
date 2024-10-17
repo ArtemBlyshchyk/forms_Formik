@@ -15,12 +15,28 @@ function App() {
     );
   });
 
+  const addContact = (newContact) => {
+    setContacts((prevContacts) => {
+      return [...prevContacts, newContact];
+    });
+  };
+
+  const deleteContact = (contactId) => {
+    setContacts((prevContacts) => {
+      return prevContacts.filter((prevContact) => prevContact.id !== contactId);
+    });
+  };
+
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactForm />
+      <ContactForm onAddContat={addContact} />
       <SearchBox setFilter={setFilter} filter={filter} />
-      <ContactList contacts={filteredContact} filter={filter} />
+      <ContactList
+        contacts={filteredContact}
+        filter={filter}
+        onDeleteContact={deleteContact}
+      />
     </div>
   );
 }

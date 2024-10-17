@@ -1,0 +1,32 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/* .formContainer input {
+  margin-bottom: 10px;
+} */
+
+.inputContainer input {
+  padding: 5px 5px;
+  border: 2px solid darkgray;
+}
+
+.inputContainer input:focus {
+  border: 2px solid rgb(159, 208, 239);
+  outline: none;
+}
+
+.inputContainer span {
+  color: red;
+}
