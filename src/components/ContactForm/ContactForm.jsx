@@ -4,6 +4,7 @@ import { ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { nanoid } from "nanoid";
 import { useId } from "react";
+import PropTypes from "prop-types";
 import Button from "../Button/Button.jsx";
 
 const ContactFormSchema = Yup.object().shape({
@@ -74,6 +75,10 @@ const ContactForm = ({ onAddContat }) => {
       </Formik>
     </div>
   );
+};
+
+ContactForm.propTypes = {
+  onAddContat: PropTypes.func.isRequired,
 };
 
 export default ContactForm;

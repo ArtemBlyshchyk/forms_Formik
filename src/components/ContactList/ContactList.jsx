@@ -1,4 +1,5 @@
 // import css from "./ContactList.module.css";
+import PropTypes from "prop-types";
 
 import Contact from "../Contact/Contact.jsx";
 
@@ -17,6 +18,18 @@ const ContactList = ({ contacts, onDeleteContact }) => {
         })}
     </ul>
   );
+};
+
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+
+  onDeleteContact: PropTypes.func.isRequired,
 };
 
 export default ContactList;
