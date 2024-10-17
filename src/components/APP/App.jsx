@@ -1,8 +1,9 @@
-import ContactForm from "./components/ContactForm/ContactForm.jsx";
-import SearchBox from "./components/SearchBox/SearchBox.jsx";
-import ContactList from "./components/ContactList/ContactList.jsx";
+import ContactForm from "../ContactForm/ContactForm.jsx";
+import SearchBox from "../SearchBox/SearchBox.jsx";
+import ContactList from "../ContactList/ContactList.jsx";
 import { useEffect, useState } from "react";
-import initialContacts from "./data/contacts.json";
+import initialContacts from "../../data/contacts.json";
+import css from "./App.module.css";
 
 function App() {
   const [contacts, setContacts] = useState(() => {
@@ -39,7 +40,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={css.mainContainer}>
       <h1>Phonebook</h1>
       <ContactForm onAddContat={addContact} />
       <SearchBox setFilter={setFilter} filter={filter} />

@@ -1,11 +1,11 @@
-// import css from "./ContactList.module.css";
+import css from "./ContactList.module.css";
 import PropTypes from "prop-types";
 
 import Contact from "../Contact/Contact.jsx";
 
 const ContactList = ({ contacts, onDeleteContact }) => {
   return (
-    <ul>
+    <ul className={css.listContainer}>
       {Array.isArray(contacts) &&
         contacts.map((contact) => {
           return (
